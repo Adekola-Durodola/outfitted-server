@@ -27,7 +27,7 @@ export class AuthService {
     const existingUser = await this.usersService.findUserByEmail(createUserDto.email);
     if (existingUser) throw new BadRequestException('User already exists');
     const user = await this.usersService.create(createUserDto);
-    // await this.usersService.sendVerificationEmail(user.id);
+    await this.usersService.sendVerificationEmail(user.id);
 
     const accessToken = this.generateAccessToken(user.id);
     const refreshToken = this.generateRefreshToken(user.id);

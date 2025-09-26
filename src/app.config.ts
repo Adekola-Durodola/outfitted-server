@@ -2,7 +2,6 @@ export const AppConfig = () => ({
     PORT: process.env.PORT,
     JWT_SECRET: process.env.JWT_SECRET,
     JWT_REFRESH_SECRET: process.env.JWT_REFRESH_SECRET,
-    DATABASE_URL: process.env.DATABASE_URL,
     PUBLIC_AWS_BUCKET_REGION: process.env.PUBLIC_AWS_BUCKET_REGION,
     PUBLIC_AWS_ACCESS_KEY: process.env.PUBLIC_AWS_ACCESS_KEY,
     AWS_ACCESS_SECRET_KEY: process.env.AWS_ACCESS_SECRET_KEY,
